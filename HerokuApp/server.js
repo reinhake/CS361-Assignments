@@ -24,6 +24,6 @@ app.get('*', function (req, res, next) {
     res.status(404).render('404');
 });
 
-app.listen(port, function () {
+app.listen(app.get('port'), function () {
     console.log("Server has begun listening on port 8080");
 });
