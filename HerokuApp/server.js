@@ -9,7 +9,7 @@ app.set('view engine', 'html');
 app.use(express.static('public'));
 app.use(express.json())
 
-var port = 8080
+app.set('port', process.env.PORT || 8080);
 
 app.get('/', function (req, res) {
 	res.sendfile('index.html')
@@ -25,5 +25,5 @@ app.get('*', function (req, res, next) {
 });
 
 app.listen(port, function () {
-    console.log("Server has begun listening on port " + port);
+    console.log("Server has begun listening on port 8080");
 });
